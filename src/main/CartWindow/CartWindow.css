@@ -1,0 +1,230 @@
+.CartWindow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    max-height: 100%;
+    right: 5%;
+    top: 0px;
+
+    background: #fff;
+}
+
+.CartWindow .bag {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-left: 10%;
+    width: 330px;
+    margin: 10px 0 10px 7%;
+}
+
+.cartItemPrice {
+    font-weight: 600;
+    bottom: auto;
+    top: auto;
+}
+
+.cartItem {
+    font-family: 'Raleway', sans-serif;
+    width: 335px;
+    min-height: 140px;
+    overflow: hidden;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    margin: 0 0 41px 16px;
+    position: relative;
+}
+
+.cartItem p { 
+    margin: 10px 0;
+}
+
+.cartItem img {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    bottom: 0;
+}
+
+
+.shadow { 
+    background: #D4D3D7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.viewBag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 16px 32px;
+    cursor: pointer;
+    width: 140px;
+    height: 43px;
+    left: 13px;
+    bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #1D1F22;
+    box-sizing: border-box;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0;
+}
+
+.checkOut {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: none;
+    width: 143px;
+    height: 43px;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    background: #5ECE7B;
+    color: white;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0;
+}
+
+.cartButtons {
+    position: relative;
+    margin-top: 40px;
+}
+
+.cartItemName {
+    width: 136px;
+}
+
+.total {
+    position: relative;
+    padding-inline-start: 0;
+    font-weight: 600;
+    bottom: 15%;
+    display: flex;
+    width: 100%;
+}
+
+.total li {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 20px 0 16px;
+}
+
+.total div {
+    flex: 1;
+    height: 1px;
+}
+
+.cartItemButtons {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #1D1F22;
+    box-sizing: border-box;
+}
+
+.__smallBtn {
+    left: 0px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.__mediumBtn {
+    left: 12%;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.__minusBtn {
+    bottom: 0%;
+    left: 48%;
+    cursor: pointer;
+}
+
+.__plusBtn {
+    left: 48%;
+    top: 0;
+    cursor: pointer;
+}
+
+.__counter {
+    left: 48%;
+    top: auto;
+    bottom: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+
+/* Empty Cart styles */
+
+.cartEmpty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+.cartEmpty h2 { 
+    position: relative;
+    margin: 5% 12% 3% 0;
+}
+
+.cartEmpty p {
+    width: 280px;
+    line-height: 24px;
+    opacity: 0.5;
+}
+
+.cartEmpty .arrowButton {
+    width: 145px;
+    margin-top: 20px;
+    background-color: #5ECE7B;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+}
+
+.cartEmpty .arrowButton img {
+    margin: 5.5px 0 0 10px;
+}
+
+.cartEmpty .arrowButton p {
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+    color: #1D1F22;
+    opacity: 1;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.cartEmpty .arrowButton:hover img {
+    position: relative;
+    top: 1px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: transform 0.15s ease-in-out;
+}

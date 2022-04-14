@@ -1,0 +1,44 @@
+.logoWrap {
+    position: relative;
+    width: 41px;
+    height: 41px;
+    left: 50%;
+    right: 50%;
+    top: 25%;
+}
+
+.logoFirst {
+    position: absolute;
+    left: 0;
+    right: -0.07%;
+    top: 6%;
+    bottom: 0.83%;
+}
+
+.logoSecond {
+    position: absolute;
+    left: -5%;
+    top: 2%;
+}
+
+.arrowFirst {
+
+/* svg 21 */
+
+position: absolute;
+left: 15.65%;
+right: 24%;
+top: 12%;
+bottom: 57%;
+
+
+}
+
+.arrowSecond {
+    /* svg 19 */
+
+    position: absolute;
+    left: 44%;
+    top: -71%;
+
+}

@@ -1,0 +1,141 @@
+.addToCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: none;
+    width: 292px;
+    height: 52px;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    background: #5ECE7B;
+    color: white;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 0 40px 0;
+}
+
+.merchSize {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #1D1F22;
+}
+
+.merchPrice {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    /* identical to box height, or 100% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #1D1F22;
+}
+
+.merchPriceNumber {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #1D1F22;
+}
+
+.sizeBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #1D1F22;
+    box-sizing: border-box;
+    width: 63px;
+    min-width: 45px;
+    height: 45px;
+    min-height: 40px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: #292929;
+    margin: 0 0 0 20px;
+    background-color: #fff ;
+}
+
+.sizeBox:hover {
+    background-color: black;
+    color:#fff;
+    cursor: pointer;
+}
+
+.sizeBox:first-child {
+    margin: 0;
+}
+
+.description {
+    display: flex;
+    width: 292px;
+    height: 103px;
+}
+
+.sizes {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.merchTitle {
+    width: 235px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.merchImage {
+    float: left;
+    margin: 0 100px 0 25%;
+    width: 650px;
+    height: 530px;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 125px;
+    position: static;
+}
+
+.additionalImages {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    left: 10em;
+    top: 220px;
+}
+
+.additionalImages img {
+    display: block;
+    margin: 0 0 40px 0;
+}

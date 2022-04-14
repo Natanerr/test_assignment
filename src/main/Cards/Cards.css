@@ -1,0 +1,45 @@
+.card {
+    position: relative;
+    display: 'flex';
+    font-family: 'Raleway';
+    flex-direction: 'row';
+    flex-wrap: 'wrap';
+    box-shadow: none;
+    margin-bottom: 50px;
+}
+
+.card:hover {
+    box-shadow: 0 3px 40px rgba(187, 187, 187, 0.25), 0 3px 40px rgba(187, 187, 187, 0.25);
+    transform: scale(1.03);
+}
+
+.card p {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-size: 18px;
+}
+
+.card img {
+    width: 450px;
+    height: 445px;
+}
+
+.card .shopCart {
+    position: absolute;
+    right: 3%;
+    bottom: 13%;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.card:hover .shopCart {
+    visibility: visible;
+}
+
+.price {
+    font-weight: 600;
+}
+

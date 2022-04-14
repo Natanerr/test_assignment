@@ -1,0 +1,68 @@
+.bagPage {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  margin-left: 8em;
+  color: #1d1f22;
+  max-width: 55em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bagTitle {
+  position: relative;
+  line-height: 40px;
+  left: 4.5em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.bagCard {
+  position: relative;
+  margin-bottom: 30px;
+  min-height: 212px;
+  border-top: #e5e5e5 1px solid;
+}
+
+.bagImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.bagBtn {
+  position: absolute;
+  background-color: #ffffff;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #1d1f22;
+  box-sizing: border-box;
+}
+
+.__plus {
+  right: 6em;
+  top: 12%;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.__minus {
+  right: 6em;
+  bottom: 1%;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.__counter {
+  right: 6em;
+  top: 45%;
+  text-align: center;
+  border: none;
+}

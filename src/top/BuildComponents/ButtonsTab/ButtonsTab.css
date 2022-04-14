@@ -1,0 +1,221 @@
+.Womens {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+
+    position: static;
+    width: 97px;
+    height: 56px;
+    left: 0px;
+    bottom: 30px;
+    border: none;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    position: static;
+    height: 20px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 20px/2 - 16px);
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 19px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* --c-primary */
+
+    color: #1D1F22;
+    background-color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
+    cursor: pointer;
+}
+
+.Mens {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+
+    position: static;
+    width: 69px;
+    height: 56px;
+    left: 97px;
+    bottom: 0px;
+    border: none;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+    position: static;
+    height: 20px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 20px/2 - 16px);
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 19px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* --c-text */
+
+    color: #1D1F22;
+    background-color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
+    cursor: pointer;
+}
+
+.Kids {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+
+    position: static;
+    width: 68px;
+    height: 56px;
+    left: 166px;
+    bottom: 0px;
+    border: none;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 0px;
+    position: static;
+    height: 20px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 20px/2 - 16px);
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* identical to box height, or 19px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* --c-text */
+
+    color: #1D1F22;
+    background-color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
+    cursor: pointer;
+
+}
+
+.buttonsTab {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 234px;
+    height: 80px;
+    left: 8%;
+    bottom: 0px;
+
+}
+
+#Women-underline {
+    content: '';
+    width: 43%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 14%;
+    transform: translateX(-50%);
+    background: #5ECE7B;
+    transition: width 0.3s;
+    visibility: hidden;
+}
+
+#Men-underline {
+    content: '';
+    width: 43%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #5ECE7B;
+    transition: width 0.3s;
+    visibility: hidden;
+}
+
+#Kid-underline {
+    content: '';
+    width: 43%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 80%;
+    transform: translateX(-50%);
+    background: #5ECE7B;
+    transition: width 0.3s;
+    visibility: hidden;
+}
+
+
+

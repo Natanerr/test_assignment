@@ -1,0 +1,27 @@
+.valuteChoosWindow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 114px;
+    height: 169px;
+    left: 86%;
+    top: 65px;
+
+    background: #FFFFFF;
+    box-shadow: 0 3px 40px rgba(187, 187, 187, 0.25), 0 3px 40px rgba(187, 187, 187, 0.25);
+}
+
+.valutes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valutes li {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}

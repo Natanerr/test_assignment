@@ -1,0 +1,53 @@
+.cart {
+    position: relative;
+    top: 2%;
+    width: 30px;
+    margin-left: 17px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.wheelOne {
+    position: absolute;
+    top: 65%;
+    right: 65%;
+}
+
+.wheelTwo {
+    position: absolute;
+    top: 65%;
+    right: 39%;
+}
+
+.cartCounter {
+    position: absolute;
+    left: 43%;
+    top: 10%;
+    width: 20px;
+    height: 20px;
+
+    background: #1D1F22;
+    border-radius: 50px;
+}
+
+.lengthOfCart {
+    position: absolute;
+    left: 35%;
+    top: -59%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
