@@ -25,7 +25,6 @@ class App extends React.Component {
       merchTitle: "",
       merchPrice: null,
       merchImageUrl: "",
-      counter: 1,
     };
   }
 
@@ -50,7 +49,7 @@ class App extends React.Component {
         })
       );
     axios
-      .get("https://62287d409fd6174ca8258785.mockapi.io/Cartlist")
+      .get("https://62287d409fd6174ca8258785.mockapi.io/cartlist")
       .then((res) =>
         this.setState({
           cartItems: res.data,
@@ -65,45 +64,6 @@ class App extends React.Component {
   cartOpener = () => {
     this.setState({
       isCartOpened: !this.state.isCartOpened,
-    });
-  };
-
-  addToCart = async (obj) => {
-    try {
-      if (
-        this.state.cartItems.find(
-          (cart) => Number(cart.parentId) === Number(obj.parentId)
-        )
-      ) {
-        this.setState((prev) => ({
-          counter: prev.counter + 1,
-        }));
-      } else {
-        const { data } = await axios.post(
-          "https://62287d409fd6174ca8258785.mockapi.io/Cartlist",
-          obj
-        );
-        console.log(obj);
-        this.setState((prevState) => ({
-          cartItems: [...prevState.cartItems, data],
-        }));
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  removeFromCart = (id) => {
-    this.setState((prev) => ({
-      cartItems: prev.cartItems.filter((item) => item.id !== id),
-    }));
-
-    axios.delete(`https://62287d409fd6174ca8258785.mockapi.io/Cartlist/${id}`);
-  };
-
-  searchInput = (event) => {
-    this.setState({
-      searchValue: event.target.value,
     });
   };
 
@@ -130,18 +90,14 @@ class App extends React.Component {
             index
             element={
               <Home
-                searchInput={this.searchInput}
                 searchValue={this.state.searchValue}
-                removeFromCart={this.removeFromCart}
-                addToCart={this.addToCart}
-                items={this.state.items}
-                cartItems={this.state.cartItems}
+                products={this.state.items}
                 isCartOpened={this.state.isCartOpened}
-                cartOpener={this.cartOpener}
                 categoryName={this.state.categoryName}
+                cartOpener={this.cartOpener}
                 categoryTitle={this.categoryTitle}
                 routeToNewPage={this.routeToNewPage}
-                counter={this.state.counter}
+                searchInput={this.searchInput}
               />
             }
           ></Route>

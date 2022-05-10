@@ -2,63 +2,40 @@ import React from "react";
 import "./CartWindow.css";
 
 class CartWindow extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 1,
-    };
-  }
-
-  plusCounter = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter + 1,
-    }));
-  };
-
-  minusCounter = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter - 1,
-    }));
-  };
-
   render() {
+    const { cartItems, handleRemove, handleChange } = this.props;
     return (
       <div className="shadow">
         <div className="CartWindow">
-          <h1 className="bag">My Bag, {this.props.cartItems.length} items</h1>
+          <h1 className="bag">My Bag, {cartItems.length} items</h1>
 
-          {this.props.cartItems.length > 0 ? (
+          {cartItems.length > 0 ? (
             <>
-              {this.props.cartItems.map((obj) => {
+              {cartItems.map((item) => {
                 return (
-                  <div key={obj.id} className="cartItem">
+                  <div key={item.id} className="cartItem">
                     <div className="cartItemName">
-                      <p>{obj.title}</p>
+                      <p>{item.title}</p>
                     </div>
-                    <p className="cartItemPrice">${obj.price}</p>
+                    <p className="cartItemPrice">${item.price}</p>
                     <img
                       alt="cart Merchandise"
                       width={135}
                       height={141}
-                      src={obj.imageUrl}
+                      src={item.imageUrl}
                     />
 
                     <button
                       className="cartItemButtons __plusBtn"
-                      onClick={this.plusCounter}
+                      onClick={() => handleChange(item, 1)}
                     >
                       +
                     </button>
-                    <button className="cartItemButtons __counter">
-                      {this.state.counter}
-                    </button>
+                   <div className="cartItemButtons __counter">
+                      {item.amount}
+                   </div>
                     <button
-                      onClick={
-                        this.state.counter === 0
-                          ? this.props.removeFromCart(obj.id)
-                          : this.minusCounter
-                      }
+                      onClick={() => item.amount === 1 ? handleRemove(item.id) : handleChange(item, -1)}
                       className="cartItemButtons __minusBtn"
                     >
                       -

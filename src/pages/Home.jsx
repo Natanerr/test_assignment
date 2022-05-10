@@ -5,60 +5,92 @@ import React from "react";
 import CategoryTitle from "../main/CategoryTitle/CategoryTitle.js";
 import Cards from "../main/Cards/Cards.js";
 import CartWindow from "../main/CartWindow/CartWindow.js";
+import axios from "axios";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: this.props.searchValue,
+      cart: []
     };
   }
 
+  handleClick = (item) => {
+    if(this.state.cart.indexOf(item) !== -1) return;
+    this.setState((prevState) => ({
+      cart: [...prevState.cart, item]
+    }))
+  };
+
+  handleChange = (item, d) => {
+    const ind = this.state.cart.indexOf(item);
+    const arr = this.state.cart
+
+    if (arr[ind].amount === 0) {
+      arr[ind].amount = 1;
+      this.setState(() => ({  
+        cart: [...arr]
+      }))
+      axios.post("https://62287d409fd6174ca8258785.mockapi.io/cartlist",this.state.cart)
+    } else {
+      arr[ind].amount += d;
+      this.setState(() => ({  
+        cart: [...arr]
+      }))
+    }
+  }
+
+  handleRemove = (id) => {
+   const array = this.state.cart.filter(item => item.id !== id)
+   
+   this.setState({
+     cart: array
+   })
+
+    this.handlePrice();
+  };
+
+  handlePrice = () => {
+    let ans = 0;
+    this.state.cart.map((item) => (ans += item.amount * item.price));
+
+    this.setState((prevState) => ({
+      price: prevState.price,
+      ans
+    }));
+  };
+
   render() {
+    const { products } = this.props;
     return (
+      <React.Fragment>
+
       <div>
         <CategoryTitle categoryName={this.props.categoryName} />
 
-        <h2>
-          {this.props.searchValue
-            ? `Trying to find: "${this.props.searchValue}"`
-            : "Our merchandise"}
-        </h2>
-
-        <div className="inputChange">
-          <input
-            onChange={this.props.searchInput}
-            value={this.props.searchValue}
-            placeholder="Find..."
-          />
-          {this.props.searchValue && (
-            <p onClick={() => console.log(this.props)}>x</p>
-          )}
-        </div>
-
         <div className="cardsWrapper">
-          {this.props.items
-            .filter((obj) => obj.title.includes(this.props.searchValue))
-            .map((obj, index) => (
+        {products.map((item) => (
               <Cards
-                key={index}
-                onRouteToNewPage={(obj) => this.props.routeToNewPage(obj)}
-                onAddToCart={(obj) => this.props.addToCart(obj)}
-                {...obj}
+                key={item.id}
+                item={item}
+                handleClick={this.handleClick}
+                cartItems={this.state.cart}
               />
             ))}
         </div>
 
         {this.props.isCartOpened ? (
           <CartWindow
-            removeFromCart={this.props.removeFromCart}
             closeCart={this.props.cartOpener}
-            cartItems={this.props.cartItems}
-            counter={this.props.counter}
+            cartItems={this.state.cart}
+            handleChange={this.handleChange}
+            handleRemove={this.handleRemove}
+            handlePrice={this.handlePrice}
           />
         ) : null}
       </div>
+      </React.Fragment>
     );
   }
 }

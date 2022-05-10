@@ -3,28 +3,22 @@ import "./Cards.css";
 import { Link } from "react-router-dom";
 
 class Cards extends React.Component {
-  onAddToCart = () => {
-    return this.props.onAddToCart(this.props);
-  };
-
-  onRouteToNewPage = () => {
-    return this.props.onRouteToNewPage(this.props);
-  };
 
   render() {
+    const { handleClick, road, item } = this.props
     return (
-      <div onClick={this.onRouteToNewPage} className="card">
+      <div onClick={road} className="card">
         <Link to="/merchandise">
-          <img alt="our shop goods" src={this.props.imageUrl} />
+          <img alt="our shop goods" src={item.imageUrl} />
         </Link>
         <img
           alt="cartImage"
           className="shopCart"
           src={"./images/cart.png"}
-          onClick={this.onAddToCart}
+          onClick={() => handleClick(item)}
         />
-        <p>{this.props.title}</p>
-        <p className="price"> {this.props.price} </p>
+        <p>{item.title}</p>
+        <p className="price"> {item.price} </p>
       </div>
     );
   }
